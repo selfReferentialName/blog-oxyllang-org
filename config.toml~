@@ -2,11 +2,7 @@ baseURL = "/"
 title = "The Oxyl Language Blog"
 languageCode = "en-us"
 paginate = 10
-# theme = "hugo-theme-arch-terminal"
-
-[module]
-  [[module.imports]]
-    path = "github.com/foo-dogsquared/hugo-theme-arch-terminal"
+theme = "arch-terminal"
 
 # Your parameters for the theme
 [params]
