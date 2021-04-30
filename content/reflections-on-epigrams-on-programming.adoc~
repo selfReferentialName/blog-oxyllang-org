@@ -1,0 +1,114 @@
+---
+title: "Reflections on Epigrams on Programming"
+date: 2021-04-30T19:34:22+01:00
+draft: true
+---
+
+In 1982, Alan Perlis published http://pu.inf.uni-teubingen.de/users/klaeren/epigrams.html["Epigrams on Programming"].
+Seeing as there's a https://en.wikipedia.org/wiki/Epigrams_on_Programming[Wikipedia article about it], I thought I'd
+see how well it holds up and give my thoughts about them. Note that I've made minor updates to the language when I've
+found it, e.g, unclear, changed the order, and ommitted ones which aren't that interesting or are too confusing.
+
+== 8: "A programming language is low level when its programs require attention to the irrelevant."
+
+I'd argue that this isn't the definition of a programming language being low level, but it being
+too low level for the task at hand. In some cases, speed is very important, so the details needed
+to be fast without affecting semantics (e.g. integer width) need to be considered, while in other
+cases, it's fairly irrelevant. I wouldn't use pure.footnote[numpy and other libraries written in
+C and Fortran make it faster, but they aren't _pure_ Python.] Python to regularly crunch quadrillions
+of integers, but wouldn't use C to crunch a thousand integers once.
+
+== 9: "It is better to have 100 functions operate on one datastructure than 10 functions on 10 datastructures."
+
+With modern type systems, the 10 datastructure system might be better if they can remove precondations from
+the 100 functions. Aside from that, I agree.
+
+== 11: "If you have a procedure with ten parameters, you probably missed some."
+
+I think optional named arguments are a good fix for this. If you need 10 arguments, chances are a lot of them
+are likely flags or only used in edge cases or something, so you don't always need to give them. If you have
+10 arguments, the order will be hard to remember (there are over 3 billion possible orders), as will the use,
+so giving them names is probably a good idea. With optional arguments, adding more isn't a big problem,
+so you can add the ones you missed.
+
+== 12: "Recursion is the root of computation since it trades description for time."
+
+Tail-call optimised recursion is the root of modern computation since it trades description for compiler
+complexity.
+
+== 14: "In the long run every program becomes rococo - then rubble."
+
+I think programs become risotto more often than rococo.
+
+== 30: "In programming, everything we do is a special case of something more general -- and we often find out too quickly."
+
+Keep it simple stupid, you aint gonna need it.
+
+== 34: "The string is a stark data structure and everywhere it is passed there is much duplication of process. It is a perfect vehicle for hiding information."
+
+This was written before stuff like unicode encoding differences, SQL injections, XSS, and all the other lovely
+problems of string handling.
+
+== 38: "Structured Programmming supports the law of the excluded middle."
+
+New article: "Intuitionistic logic considered harmful."
+
+== 39: "Re graphics: A pictures is worth 10K words - but only those to describe the picture. Hardly any sets of 10K words can be adequately described with pictures."
+
+I definitely agree, aside from the fact that you can physically fit closer to a million words
+in a typical uncompressed picture. Granted, it will be basically white noise, but you can do it.
+
+== 40: "There are two ways to write error-free programs; only the third one works."
+
+But what about `$FAVORITE_LANGUAGE`? /s
+
+== 42: "You can measure a programmer's perspective by noting [their] attitude on the continuing vitality of FORTRAN."
+
+Despite the fact that Fortran is still alive and well, I'd say that C is probably a better gague of this
+(though it would definitely be skewed by whether they've actually written a substantial amount of modern
+C or are just thinking about the subset of C in C++ without the necessary idioms for it not to be horrible.
+
+== 44: "Sometimes I think the only universal in the computing field is the fetch-execute cycle."
+
+Modern CPUs don't have a typical fetch then execute cycle exactly (instead using a more complicated system
+with stuff like speculation and retirment), so I guess there are no universals in computing.
+
+== 49: "Giving up on assembly language was the apple in our Garden of Eden: Languages whose use squanders machine cycles are sinful. The LISP machine now permits LISP programmers to abandon bra and fig-leaf."
+
+    cat quote.txt | sed -e 's/assembly language/compiled languages/g' | sed -e 's/LISP machine/optimising Lisp compiler/g' | sed -e 's/LISP/Lisp/'
+
+== 51: "Bringing computers into the home won't change either one, but may revitalise the corner saloon."
+
+Seeing as "brining computers into the home" was probably the most impactful thing of the late 20th century,
+I'd say that this aged poorly.
+
+== 55: "A LISP programmer knows the value of everything, but the cost of nothing."
+
+`s/LISP/Haskell/`. I don't know how, but Lisp is now actually a relatively fast language when well optimised.
+
+== 59: "In English every word can be verbed. Would that it were so in our programming languages."
+
+Something something type namespace separate from value namespace so the type name can be a function.
+Although I'm not sure that the statement about English is true. Can one a?
+
+== 63: "When we write programs that 'learn,' it turns out that we do and they don't."
+
+*"When we write programs that learn, it turns out that we don't and they don't." Machine learning is hard.
+
+== 87: "We have the mini and micro computer. In what semantic niche would the pico computer fall?"
+
+There isn't such a thing, though it'd probably be most similar to a microcontroler,
+so ... industrial and appliance control?
+
+== 98: "In computing, the mean time to failure keeps getting shorter."
+
+A lot of work has been put into making this so. It turns out that bugs are better when spotted by the
+person who wrote it than some random user after the original programmer is long gone.
+
+== 103: "Purley applicative languages are poorly applicable."
+
+Something something Haskell.
+
+== 109: "Think of it! With VLSI we can pack 100 ENIACS in 1 sq. cm."
+
+It's probably in the millions now.

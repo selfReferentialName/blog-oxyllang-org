@@ -1,0 +1,4 @@
+baseURL = "http://blog.oxyllang.org/"
+languageCode = "en-us"
+title = "Oxyl Languag Blog"
+theme = "terminal"
