@@ -1,4 +1,49 @@
-baseURL = "http://blog.oxyllang.org/"
+baseURL = "/"
+title = "The Oxyl Language Blog"
 languageCode = "en-us"
-title = "Oxyl Languag Blog"
-theme = "terminal"
+paginate = 10
+theme = "arch-terminal"
+
+# Your parameters for the theme
+[params]
+    # The subtitle of the blog. Mostly appears in the <title> tag.
+    # subtitle = "Blogger"
+    # keywords = ["John Dodo", "ordinary-extinction", "blog"]
+
+    # The tagline that'll appear in the homepage as the first header.
+    # tagline = "Making near destructive blogs all around the world."
+
+    # SEO improvements
+    # enableTwitterCard = true
+    # enableOpenGraphSchema = true
+    # enableJsonLdSchema = true
+
+    # Puts a pagination section on the posts linking to the previous and next posts.
+    # enableContentPagination = true
+
+    # Include image zoom feature similar to Medium articles
+    # enableContentImageZoom = true
+
+    # Enables syntax highlighting. ;p
+    # enableLazySyntaxHighlighting = true
+
+    # Shows breadcrumbs in the post.
+    # enableBreadcrumbs = true
+
+    # Places a theme toggle button at the header logo
+    # enableThemeToggle = true
+
+    # Enable MathJax support
+    # enableMathjax = true
+
+    # 404
+    # notFoundHeader = "404 Not Found :("
+    # notFoundLinkMessage = "Now get back here."
+    # notFoundMessage = "I see you're an explorer. I like that."
+
+    # Enable content counters similar to LaTeX counters
+    # useContentCounters = true
+
+    # Use the icons of your contacts
+    # Take note this uses the icon from the Simple Icons set.
+    # useLinkIcons = true

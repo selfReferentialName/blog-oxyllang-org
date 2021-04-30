@@ -1,13 +1,12 @@
 ---
 title: "Reflections on Epigrams on Programming"
+author: "Jenifer Rain De Jager"
 date: 2021-04-30T19:34:22+01:00
-draft: true
 ---
 
 In 1982, Alan Perlis published http://pu.inf.uni-teubingen.de/users/klaeren/epigrams.html["Epigrams on Programming"].
 Seeing as there's a https://en.wikipedia.org/wiki/Epigrams_on_Programming[Wikipedia article about it], I thought I'd
-see how well it holds up and give my thoughts about them. Note that I've made minor updates to the language when I've
-and ommitted a lot of epigrams which aren't that interesting or are too confusing.
+see how well it holds up and give my thoughts.
 
 == 8: "A programming language is low level when its programs require attention to the irrelevant."
 
